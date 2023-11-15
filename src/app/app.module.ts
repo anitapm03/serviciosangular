@@ -13,6 +13,8 @@ import { ServicePersonas } from './services/service.persona';
 import { PersonasapiComponent } from './components/personasapi/personasapi.component';
 import { CochesapiComponent } from './components/cochesapi/cochesapi.component';
 import { ServiceCoches } from './services/service.coches';
+import { EmpleadosoficiosComponent } from './components/empleadosoficios/empleadosoficios.component';
+import { ServiceEmpleados } from './services/service.empleados';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { ServiceCoches } from './services/service.coches';
     HomeComponent,
     MenuComponent,
     PersonasapiComponent,
-    CochesapiComponent
+    CochesapiComponent,
+    EmpleadosoficiosComponent
   ],
   imports: [
     BrowserModule, FormsModule,
      routing, HttpClientModule
   ],
-  providers: [appRoutingProvider, ServicePersonas, ServiceCoches],
+  providers: [appRoutingProvider, ServicePersonas,
+     ServiceCoches, ServiceEmpleados],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

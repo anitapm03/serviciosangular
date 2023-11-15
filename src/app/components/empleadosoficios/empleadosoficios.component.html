@@ -1,0 +1,35 @@
+<div>
+    <h1>Buscador de empleados por funciones</h1>
+
+    <form #funcionesForm="ngForm">
+        <label>Seleccione una función para buscar:</label>
+        <br>
+        <select class="form form-control"
+        name="selectfuncion" #selectfuncion>
+            <option *ngFor="let funcion of funciones" >{{funcion}}</option>
+        </select>
+        <br>
+        <button class="btn btn-outline-info" 
+        (click)="buscarEmpleados()"
+        >Buscar!</button>
+    </form>
+    <hr>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Funcion</th>
+                <th>Turno</th>
+                <th>Salario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of empleados" >
+                <td>{{emp.apellido}}</td>
+                <td>{{emp.funcion}}</td>
+                <td>{{emp.turno}}</td>
+                <td>{{emp.salario}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
