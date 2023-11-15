@@ -23,4 +23,17 @@ export class ServiceEmpleados {
 
         return this._http.get(url);
     }
+
+    getEmpleadosMultiple(seleccion:any): Observable<any>{
+
+        var req = "api/Plantilla/PlantillaFunciones?";
+        for (var i = 0; i < seleccion.length; i++){
+            req += "funcion=" + seleccion[i] + "&";
+        }
+        var request = req.slice(0, -1);
+
+        var url = environment.apiEmpleados + request;
+
+        return this._http.get(url);
+    }
 }

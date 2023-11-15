@@ -15,6 +15,7 @@ import { CochesapiComponent } from './components/cochesapi/cochesapi.component';
 import { ServiceCoches } from './services/service.coches';
 import { EmpleadosoficiosComponent } from './components/empleadosoficios/empleadosoficios.component';
 import { ServiceEmpleados } from './services/service.empleados';
+import { EmpleadosoficiosmultipleComponent } from './components/empleadosoficiosmultiple/empleadosoficiosmultiple.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ServiceEmpleados } from './services/service.empleados';
     MenuComponent,
     PersonasapiComponent,
     CochesapiComponent,
-    EmpleadosoficiosComponent
+    EmpleadosoficiosComponent,
+    EmpleadosoficiosmultipleComponent
   ],
   imports: [
     BrowserModule, FormsModule,
